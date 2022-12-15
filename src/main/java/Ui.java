@@ -21,6 +21,7 @@ public class Ui {
         personArrayList.add(person2);
         System.out.println(loopMetoder.calculateTotalPoints(personer));
         System.out.println(loopMetoder.findMinimum(personer));
+        System.out.println(loopMetoder.findMaximum(personer));
         arrays();
     }
 
