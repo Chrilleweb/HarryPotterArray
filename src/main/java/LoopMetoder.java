@@ -34,14 +34,33 @@ public class LoopMetoder {
         return findMinimum;
     }
 
-    public Person findMaximum(Person[] people) {
-        Person maximumPerson = people[0];
-        for (Person person : people) {
+    public Person findMaximum(Person[] persons) {
+        Person maximumPerson = persons[0];
+        for (Person person : persons) {
             if (person.getPoints() > maximumPerson.getPoints()) {
                 maximumPerson = person;
             }
         }
         return maximumPerson;
+    }
+
+    public double calculateAverage(Person[] persons) {
+        int totalPoints = 0;
+        int numPeople = persons.length;
+        for (Person person : persons) {
+            totalPoints += person.getPoints();
+        }
+        return totalPoints / (double) numPeople;
+    }
+
+    public Person findByFirstName(Person[] personer, String name){
+        Person searchResult = personer[0];
+        for (Person person1 : personer){
+            if (person1.getFirstName().equals(name)){
+               searchResult = person1;
+            }
+        }
+        return searchResult;
     }
 
 }

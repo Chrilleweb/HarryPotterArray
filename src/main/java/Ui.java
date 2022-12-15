@@ -22,6 +22,8 @@ public class Ui {
         System.out.println(loopMetoder.calculateTotalPoints(personer));
         System.out.println(loopMetoder.findMinimum(personer));
         System.out.println(loopMetoder.findMaximum(personer));
+        System.out.println(loopMetoder.calculateAverage(personer));
+        System.out.println(loopMetoder.findByFirstName(personer, "Ron"));
         arrays();
     }
 
