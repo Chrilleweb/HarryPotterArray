@@ -20,6 +20,7 @@ public class Ui {
         personArrayList.add(person1);
         personArrayList.add(person2);
         System.out.println(loopMetoder.calculateTotalPoints(personer));
+        System.out.println(loopMetoder.findMinimum(personer));
         arrays();
     }
 

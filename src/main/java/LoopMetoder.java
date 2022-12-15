@@ -15,4 +15,23 @@ public class LoopMetoder {
         }
         return total;
     }
+
+    public int minimumPerson(){
+        int minimumPerson = 0;
+        for (Person person1 : persons){
+            minimumPerson = person1.getPoints();
+        }
+        return minimumPerson;
+    }
+
+    public Person findMinimum(Person[] persons){
+        Person findMinimum = null;
+        for (Person personsre : persons){
+           if (personsre.getPoints() > minimumPerson()){
+               findMinimum = personsre;
+           }
+        }
+        return findMinimum;
+    }
+
 }
