@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class LoopMetoder {
@@ -8,7 +9,7 @@ public class LoopMetoder {
 
     }
 
-    public int calculateTotalPoints(Person[] persons) {
+    public int calculateTotalPoints(ArrayList<Person> persons) {
         int total = 0;
         for (Person personere : persons){
             total += personere.getPoints();
@@ -24,18 +25,18 @@ public class LoopMetoder {
         return minimumPerson;
     }
 
-    public Person findMinimum(Person[] persons){
-        Person findMinimum = null;
+    public Person findMinimum(ArrayList<Person> persons){
+        Person findMinimum = persons.get(0);
         for (Person personsre : persons){
-           if (personsre.getPoints() > minimumPerson()){
+           if (personsre.getPoints() < findMinimum.getPoints()){
                findMinimum = personsre;
            }
         }
         return findMinimum;
     }
 
-    public Person findMaximum(Person[] persons) {
-        Person maximumPerson = persons[0];
+    public Person findMaximum(ArrayList<Person> persons) {
+        Person maximumPerson = persons.get(0);
         for (Person person : persons) {
             if (person.getPoints() > maximumPerson.getPoints()) {
                 maximumPerson = person;
@@ -44,17 +45,17 @@ public class LoopMetoder {
         return maximumPerson;
     }
 
-    public double calculateAverage(Person[] persons) {
+    public double calculateAverage(ArrayList<Person> persons) {
         int totalPoints = 0;
-        int numPeople = persons.length;
+        int numPeople = persons.size();
         for (Person person : persons) {
             totalPoints += person.getPoints();
         }
         return totalPoints / (double) numPeople;
     }
 
-    public Person findByFirstName(Person[] personer, String name){
-        Person searchResult = personer[0];
+    public Person findByFirstName(ArrayList<Person> personer, String name){
+        Person searchResult = personer.get(0);
         for (Person person1 : personer){
             if (person1.getFirstName().equals(name)){
                searchResult = person1;

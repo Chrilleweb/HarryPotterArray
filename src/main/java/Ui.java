@@ -19,11 +19,12 @@ public class Ui {
         System.out.println(person3.toString());
         personArrayList.add(person1);
         personArrayList.add(person2);
-        System.out.println(loopMetoder.calculateTotalPoints(personer));
-        System.out.println(loopMetoder.findMinimum(personer));
-        System.out.println(loopMetoder.findMaximum(personer));
-        System.out.println(loopMetoder.calculateAverage(personer));
-        System.out.println(loopMetoder.findByFirstName(personer, "Ron"));
+        personArrayList.add(person3);
+        System.out.println(loopMetoder.calculateTotalPoints(personArrayList));
+        System.out.println(loopMetoder.findMinimum(personArrayList));
+        System.out.println(loopMetoder.findMaximum(personArrayList));
+        System.out.println(loopMetoder.calculateAverage(personArrayList));
+        System.out.println(loopMetoder.findByFirstName(personArrayList, "Ron"));
         arrays();
     }
 
